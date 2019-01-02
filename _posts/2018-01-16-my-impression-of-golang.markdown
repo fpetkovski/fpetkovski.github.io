@@ -92,7 +92,7 @@ On the upside, Go 2 will have a slightly upgraded mechanism of handling errors, 
 
 #### Conclusion
 
-Overall, I like the language so far and I appreciate the simplicity it tries to maitain. In addition less verbose exception handling, Go 2 also promises generics, which will further increase the type safety of the language. I do feel though, that the language is moving 
+Overall, I like the language so far and I appreciate the simplicity it tries to maitain. In addition to less verbose exception handling, Go 2 also promises generics, which will further increase the type safety of the language. 
 
 #### References
 * [1]<https://news.ycombinator.com/item?id=4159672>
