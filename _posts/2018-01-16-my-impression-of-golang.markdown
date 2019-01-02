@@ -1,7 +1,7 @@
 ---
 layout: post
 title: My impression of Go
-tags: [frontpage, jekyll, blog]
+tags: [go]
 image: '/images/posts/go-lang-game.png'
 ---
 
@@ -73,7 +73,6 @@ What implicit interfaces allow you to do on the other hand, is to make type from
 
 Whatever the reasons for deciding to go this route, I am not convinced that the benefits of implicit interfaces outweigh their drawbacks, and I would have prefered to have explicit interfaces instead.
 
-
 #### Exception management
 
 This could be one of the most controversial features of the language, and it has been debated over and over again.
@@ -93,7 +92,7 @@ On the upside, Go 2 will have a slightly upgraded mechanism of handling errors, 
 
 #### Conclusion
 
-Overall, I like the language so far and I appreciate the simplicity it tries to maitain. In addition less verbose exception handling, Go 2 also promises generics, which will further increase the type safety of the language.
+Overall, I like the language so far and I appreciate the simplicity it tries to maitain. In addition less verbose exception handling, Go 2 also promises generics, which will further increase the type safety of the language. I do feel though, that the language is moving 
 
 #### References
 * [1]<https://news.ycombinator.com/item?id=4159672>
