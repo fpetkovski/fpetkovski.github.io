@@ -90,9 +90,21 @@ Reading through the explanation, I could see why one would find exceptions to be
 
 On the upside, Go 2 will have a slightly upgraded mechanism of handling errors, with native `check` statements, which will probably make the developer experience a bit better. In addition, since the error value usually comes as an additional return parameter from a function, it is far less likely for you as a developer to forget to handle it.
 
+#### Concurrency
+
+Go exposes two interfaces for managing concurrency, the more traditional one - communcation using shared memory, and CSP (communicating sequential processes), a model in which values are passed between concurrent activities. The former is widely adopted and used throughout different languages, but the latter, exposed through goroutines and channels, is not something you encounter very often. While Haskell has a similar concept with sparks, and Erlang and the OTP platform support the CPS model on a much stricter level, there are additional constraints which those languages impose on the developer so that the model can actually work. Go takes a less safe approach and allows you to shoot yourself in the foot (by passing pointers through channels, therefore sharing memory), but that is still better than not giving you the opportunity to use the model if you know what you are doing. 
+
+There are countless articles I ran into which are bashing goroutines and channels[[2]](https://medium.com/@sargun/go-concurrency-considered-harmful-26499a422830)[[3]](https://www.jtolio.com/2016/03/go-channels-are-bad-and-you-should-feel-bad), but I cannot agree with the sentiment they convey. The CSP implementation is merely a tool
+you can use to solve a problem for which it ends up being a good fit. No one is forcing you to use it, and if you feel there is a better tool for your problem, you should go ahead and use that tool instead. And yes, there might be better implementations in languages like Erlang and Haskell, but try hiring for people who can actually be productive writing Haskell on remotely the same scale as they could be by writing Go. 
+
+Goroutines, by being such a central feature of Go, make a strong impact on the entire ecosystem by democratising CSP. I belive that with time, we will start to see implementations
+of the model in more traditional languages, which is an amazing outcome in and of itself.
+
 #### Conclusion
 
-Overall, I like the language so far and I appreciate the simplicity it tries to maitain. In addition to less verbose exception handling, Go 2 also promises generics, which will further increase the type safety of the language. 
+Overall, I like the language so far and I appreciate the simplicity it tries to maitain. In addition to less verbose exception handling, Go 2 also promises generics, which will further increase the type safety of the language. The authors have decided to allow to communicity to drive the further development of Go, and am looking forward to see how the language will evolve in the future.
 
 #### References
 * [1]<https://news.ycombinator.com/item?id=4159672>
+* [2]<https://medium.com/@sargun/go-concurrency-considered-harmful-26499a422830>
+* [3]<https://www.jtolio.com/2016/03/go-channels-are-bad-and-you-should-feel-bad>
