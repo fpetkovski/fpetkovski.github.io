@@ -67,7 +67,7 @@ func (foo Foo) Run() {}
 ```
 
 I must admit that the decision to go for such a design struck me quite odd, and I am still conflicted on the entire idea. 
-Just because a type exposes methods which match the signature of a particular interface does not mean that the type fulfills the semantics of the interface. As a result, a type might accidentally fulfil a particular interface, even if that has not been the intention. 
+Just because a type exposes methods which match the signature of a particular interface does not mean that the type fulfills the semantics of that interface. As a result, a type might accidentally fulfil a particular interface, even if that has not been the intention in the first place. 
 
 What implicit interfaces allow you to do on the other hand, is to make types from external modules satisfy an interface, withough changing the code for those modules.
 
