@@ -54,14 +54,14 @@ For me personally, this this combination of features is a good replacement for c
 #### Implicitly confusing interfaces
 
 In most traditional OO languages, a class must, in one form or another, declare all of the interfaces that it implements.
-With Go on the other hand, a type can implement an interface implicitly, without declaring the interface in its signature. 
-For example, given the interface:
+With Go on the other hand, a type can implement an interface implicitly, without declaring it in its signature. 
+For example, given `Runnable`:
 ```
 type Runnable interface {
 	Run()
 }
 ```
-all a type `Foo` has to do to implement the interface is to implement the methods themselves, like so:
+all a type `Foo` has to do to implement `Runnable` is to implement the methods themselves, like so:
 ```
 func (foo Foo) Run() {}
 ```
