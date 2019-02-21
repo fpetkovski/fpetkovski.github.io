@@ -8,19 +8,19 @@ image: '/images/posts/go-lang-game.png'
 #### Introduction
 
 The Go language was developed by Google to solve specific problems in the domain of infrastructure software development.
-As a result of being designed with very specific objectives in mind, it ended up being an industrial-grade language with peculiar combination of features, instead of an academic language testing and probing the boundaries of programming paradigms.
+As a result of being designed with very specific objectives in mind, it ended up being an industrial-grade language with peculiar combination of features, instead of an academic language, testing and probing the boundaries of programming paradigms.
 
 Contrary to many people's expectations, Go did not make a dramatic entrance to the scene, and did not sieze the market overnight. Since its official release in 2012, it has been gaining popularity relatively slowly, and is nowadays most notably represented by projects like Docker, Kubernetes, the HashiCorp suite, and pretty much any other infrastructure management software solution out there. 
 
 What I did notice lately though, is that there there has been a slow adoption of the language for solving problems
-in domains other than infrastructure automation, with companies starting to use it for automatic business domain logic and business processes as well. 
+in domains other than infrastructure automation, with companies starting to use it for automatic business domain logic and business processes. 
 This adoption is probably further amplified by the trend of moving to microservices, where Go is a good fit due to its small footprint as well as the statically linked, single binary compilation target.
 
 As a result of the mixed feelings people had for the language, I decided to give Go a go, and see for myself what the fuss is about. 
 
 #### A refreshing view on object orientation
 
-What I immediatelly loved about the language is its strong focus on fundamental object orientation, similar to what was initially envisioned by Alan Kay. While this outcome might not have been the end goal of the authors of the language, Go ended up with a design which closely resembles what object orientation is supposed to be about: **objects** passing **messages** to other **objects**. When classes and type inheritance are left completely out of the equation, thinking in terms of composition and delegation becomes very natural. 
+What I immediatelly loved about the language is its strong focus on fundamental object orientation, similar to the model initially envisioned by Alan Kay. While this outcome might not have been the end goal of the authors of the language, Go has ended up with a design which closely resembles what object orientation is supposed to be about: **objects** passing **messages** to other **objects**. When classes and type inheritance are left completely out of the equation, thinking in terms of composition and delegation becomes very natural. 
 
 One detail which I liked in particular was the fact that the compiler assists you with implementing delegation by generating boilerplate code for you. To illustrate this idea, take a look at the code snipped bellow as an example.
 
@@ -67,7 +67,7 @@ func (foo Foo) Run() {}
 ```
 
 I must admit that the decision to go for such a design struck me quite odd, and I am still conflicted on the entire idea. 
-Just because a type exposes methods which match the signature of a particular interface, does not mean that the type fulfills the semantics of the interface. As a result, a type might accidentally fulfil a particular interface, even if that was not the intention. 
+Just because a type exposes methods which match the signature of a particular interface does not mean that the type fulfills the semantics of the interface. As a result, a type might accidentally fulfil a particular interface, even if that has not been the intention. 
 
 What implicit interfaces allow you to do on the other hand, is to make types from external modules satisfy an interface, withough changing the code for those modules.
 
@@ -105,6 +105,6 @@ of the model in more traditional languages, which would be an amazing outcome in
 Overall, I like the language so far and I appreciate the simplicity it tries to maitain. In addition to less verbose exception handling, Go 2 also promises generics, which will further increase the type safety of the language. The authors have decided to allow to communicity to drive the further development of Go, and am looking forward to see how the language will evolve in the future.
 
 #### References
-* [1]<https://news.ycombinator.com/item?id=4159672>
-* [2]<https://medium.com/@sargun/go-concurrency-considered-harmful-26499a422830>
-* [3]<https://www.jtolio.com/2016/03/go-channels-are-bad-and-you-should-feel-bad>
+* [1] <https://news.ycombinator.com/item?id=4159672>
+* [2] <https://medium.com/@sargun/go-concurrency-considered-harmful-26499a422830>
+* [3] <https://www.jtolio.com/2016/03/go-channels-are-bad-and-you-should-feel-bad>
