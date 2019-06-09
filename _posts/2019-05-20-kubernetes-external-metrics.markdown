@@ -40,7 +40,7 @@ type ExternalMetricsProvider interface {
 ```
 
 The implementation of the interface can be found in the [`server`](https://github.com/fpetkovski/k8s-external-metrics-server/blob/master/pkg/metrics_server/server.go) type and is quite straightforward. 
-All the metrics information is kept in memory and is retrieved from the beanstalkd queue each 5 seconds.
+All the metrics information is kept in memory and is retrieved from the beanstalkd queue every 5 seconds.
 
 ### Deploying the external metrics server
 Deploying the actual docker image running the server took me a while to figure out, but was also not difficult once I had the boilerplate in place.
