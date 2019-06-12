@@ -7,7 +7,7 @@
 
 # Site settings
 title:       Filip Petkovski
-email:       'filip.petkovsky@gmail.com'
+email:       'https://filip.petkovsky@gmail.com'
 description: ''
 baseurl:     '' # The subpath of your site, e.g. /blog
 url:         'fpetkovski.github.io' # The base hostname & protocol for your site
