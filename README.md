@@ -1,1 +1,3 @@
-#### Filip's Blog
+#### Personal Blog
+
+http://fpetkovski.io/
